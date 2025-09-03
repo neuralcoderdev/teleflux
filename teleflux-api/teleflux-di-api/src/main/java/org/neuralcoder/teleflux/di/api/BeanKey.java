@@ -1,39 +1,33 @@
 package org.neuralcoder.teleflux.di.api;
 
-import lombok.NonNull;
-import lombok.Value;
-
-/** Bean key = Type + optional qualifier. */
-@Value
-public class BeanKey<T> {
-    @NonNull Class<T> type;
-    String qualifier; // may be null
+/**
+ * Bean key = Type + optional qualifier.
+ * Using a Java record guarantees a canonical constructor is present at compile time,
+ * avoiding Lombok/AP issues and generic inference pitfalls.
+ */
+public record BeanKey<T>(Class<T> type, String qualifier) {
 
     /** Strongly-typed factory. */
     public static <T> BeanKey<T> of(Class<T> type) {
-        // Explicit type arg prevents inference surprises.
-        return new BeanKey<T>(type, null);
+        return new BeanKey<>(type, null);
     }
 
     /** Strongly-typed factory with qualifier. */
     public static <T> BeanKey<T> of(Class<T> type, String qualifier) {
-        return new BeanKey<T>(type, qualifier);
+        return new BeanKey<>(type, qualifier);
     }
 
-    /**
-     * Wildcard-friendly factory: accepts Class<?> when T is unknown at compile time.
-     * We instantiate BeanKey<Object> and return it as BeanKey<?> (denotable).
-     */
+    /** Wildcard-friendly factory: accepts Class<?> when T is unknown at compile time. */
     public static BeanKey<?> ofWildcard(Class<?> type) {
         @SuppressWarnings("unchecked")
         Class<Object> t = (Class<Object>) type;
-        return new BeanKey<Object>(t, null);
+        return new BeanKey<>(t, null);
     }
 
     /** Wildcard-friendly factory with qualifier. */
     public static BeanKey<?> ofWildcard(Class<?> type, String qualifier) {
         @SuppressWarnings("unchecked")
         Class<Object> t = (Class<Object>) type;
-        return new BeanKey<Object>(t, qualifier);
+        return new BeanKey<>(t, qualifier);
     }
 }

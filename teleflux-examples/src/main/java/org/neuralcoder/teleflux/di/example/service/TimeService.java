@@ -5,9 +5,9 @@ import org.neuralcoder.teleflux.di.api.annotations.Singleton;
 
 import java.time.Instant;
 
-/** Provides current time (singleton for demo). */
 @Service
 @Singleton
 public class TimeService {
     public Instant now() { return Instant.now(); }
+    public static String fmt(Instant t) { return t.toString(); }
 }

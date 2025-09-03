@@ -5,8 +5,8 @@ import java.util.Map;
 /** Compiler options for fine tuning codegen. */
 public final class ProcessorOptions {
     public static final String OPTION_DEBUG = "teleflux.di.debug";
-    public static final String OPTION_INDEX_CLASS = "teleflux.di.indexClass"; // default: org.neuralcoder.teleflux.di.generated.ComponentIndex
-    public static final String OPTION_PACKAGE = "teleflux.di.pkg";            // default: org.neuralcoder.teleflux.di.generated
+    public static final String OPTION_INDEX_CLASS = "teleflux.di.indexClass";
+    public static final String OPTION_PACKAGE = "teleflux.di.pkg";
 
     public final boolean debug;
     public final String indexClass;

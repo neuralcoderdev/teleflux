@@ -1,38 +1,30 @@
 package org.neuralcoder.teleflux.di.example.service;
 
-import org.neuralcoder.teleflux.di.api.Lifecycle;
+import org.neuralcoder.teleflux.di.api.BeanFactory;
 import org.neuralcoder.teleflux.di.api.annotations.Inject;
 import org.neuralcoder.teleflux.di.api.annotations.PostConstruct;
 import org.neuralcoder.teleflux.di.api.annotations.PreDestroy;
 import org.neuralcoder.teleflux.di.api.annotations.Service;
 
-/** Demo service showing constructor @Inject and lifecycle hooks. */
 @Service
-public class AppService implements Lifecycle {
+public class AppService {
 
-    private final GreetingService greeter;
+    private final GreeterService greeter;
+    @Inject BeanFactory beans;
 
     @Inject
-    public AppService(GreetingService greeter) {
+    public AppService(GreeterService greeter) {
         this.greeter = greeter;
     }
 
     @PostConstruct
-    void init() {
-        System.out.println("[AppService] postConstruct invoked");
-    }
+    void init() { System.out.println("[AppService] @PostConstruct"); }
 
     @PreDestroy
-    void cleanup() {
-        System.out.println("[AppService] preDestroy invoked");
-    }
+    void cleanup() { System.out.println("[AppService] @PreDestroy"); }
 
-    @Override
-    public void stop() {
-        System.out.println("[AppService] lifecycle stop()");
-    }
-
-    public void runDemo() {
-        System.out.println(greeter.greet("Teleflux User"));
+    public void run() {
+        System.out.println(greeter.greetDecorated("Teleflux User"));
+        System.out.println(greeter.greetPlain("Teleflux User"));
     }
 }

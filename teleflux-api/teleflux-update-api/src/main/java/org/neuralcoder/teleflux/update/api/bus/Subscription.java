@@ -7,6 +7,7 @@ import org.neuralcoder.teleflux.core.api.policy.retry.RetryPolicy;
 import org.neuralcoder.teleflux.update.api.Event;
 import org.neuralcoder.teleflux.update.api.UpdateType;
 import org.neuralcoder.teleflux.update.api.context.BackpressureConfig;
+import org.neuralcoder.teleflux.update.api.context.BackpressureMode;
 import org.neuralcoder.teleflux.update.api.context.OrderingMode;
 import org.neuralcoder.teleflux.update.api.filter.Filter;
 import org.neuralcoder.teleflux.update.api.middleware.Middleware;
@@ -42,7 +43,8 @@ public class Subscription {
     @Builder.Default OrderingMode ordering = OrderingMode.NONE;
 
     /** Политика backpressure. */
-    @Builder.Default BackpressureConfig backpressure = BackpressureConfig.of(org.neuralcoder.teleflux.update.api.context.BackpressureMode.BUFFER);
+    @Builder.Default BackpressureConfig backpressure = BackpressureConfig
+            .of(BackpressureMode.BUFFER);
 
     /** Политика повторов (at-least-once семантика). */
     RetryPolicy retryPolicy;

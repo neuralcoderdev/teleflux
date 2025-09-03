@@ -1,21 +1,21 @@
 package org.neuralcoder.teleflux.di.api;
 
-import org.neuralcoder.teleflux.di.api.annotations.ScopeType;
+import lombok.*;
 
-import java.util.List;
-import java.util.Optional;
+@Getter
+@Setter
+@AllArgsConstructor
+@Builder
+@NoArgsConstructor
+public class BeanDefinition {
+    Class<?> beanClass;
+    String qualifier;
+    boolean primary;
+    int order;
+    boolean eager;
+    boolean lazy;
+    Scope scope;
+    Source source;
 
-/** Read-only SPI-описание зарегистрированного бина (для диагностики/метаданных). */
-public interface BeanDefinition {
-    Class<?> beanClass();
-    String name();
-    Optional<String> qualifier();
-    Scope scope();
-    boolean primary();
-    boolean eager();
-    boolean lazy();
-    List<Class<?>> contracts(); // какие интерфейсы реализует
-    List<String> profiles();    // активные/требуемые профили
-    List<InjectionPoint> injectionPoints();
-    Optional<ScopeType> declaredScopeType(); // если использована @ScopeType
+    public enum Source { FACTORY, CONFIG, MODULE_PROVIDES }
 }
