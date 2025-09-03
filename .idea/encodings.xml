@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" addBOMForNewFiles="with BOM under Windows, with no BOM otherwise">
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/teleflux-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/teleflux-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/teleflux-api/teleflux-bot-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/teleflux-api/teleflux-bot-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/teleflux-api/teleflux-core-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/teleflux-api/teleflux-core-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/teleflux-api/teleflux-di-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/teleflux-api/teleflux-di-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/teleflux-api/teleflux-transport-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/teleflux-api/teleflux-transport-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/teleflux-api/teleflux-update-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/teleflux-api/teleflux-update-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/teleflux-bom/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/teleflux-bom/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/teleflux-cli/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/teleflux-cli/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/teleflux-examples/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/teleflux-examples/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/teleflux-impl/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/teleflux-impl/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/teleflux-impl/teleflux-bot-impl/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/teleflux-impl/teleflux-bot-impl/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/teleflux-impl/teleflux-crypto-tl/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/teleflux-impl/teleflux-crypto-tl/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/teleflux-impl/teleflux-di-impl/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/teleflux-impl/teleflux-di-impl/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/teleflux-impl/teleflux-di-processor/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/teleflux-impl/teleflux-di-processor/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/teleflux-impl/teleflux-network-mtproto/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/teleflux-impl/teleflux-network-mtproto/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/teleflux-impl/teleflux-persistence-impl/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/teleflux-impl/teleflux-persistence-impl/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/teleflux-impl/teleflux-transport-netty/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/teleflux-impl/teleflux-transport-netty/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/teleflux-impl/teleflux-update-impl/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/teleflux-impl/teleflux-update-impl/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

@@ -1,0 +1,38 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.neuralcoder.teleflux</groupId>
+        <artifactId>TeleFlux</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>teleflux-bom</artifactId>
+    <packaging>pom</packaging>
+    <name>Teleflux :: BOM</name>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- ПИНУЕМ версии всех наших артефактов для внешних потребителей -->
+            <dependency>
+                <groupId>org.neuralcoder.teleflux</groupId>
+                <artifactId>teleflux-core-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.neuralcoder.teleflux</groupId>
+                <artifactId>teleflux-update-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <!-- ...все остальные api/impl, которые хотим экспонировать наружу ... -->
+
+            <!-- И сторонних библиотек, если нужно фиксировать -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.32</version>
+                <scope>provided</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

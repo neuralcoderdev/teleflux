@@ -1,0 +1,17 @@
+package org.neuralcoder.teleflux.update.api;
+
+public enum UpdateType {
+    MESSAGE,
+    EDITED_MESSAGE,
+    CALLBACK_QUERY,
+    INLINE_QUERY,
+    CHOSEN_INLINE_RESULT,
+    CHANNEL_POST,
+    EDITED_CHANNEL_POST,
+    CHAT_MEMBER_UPDATE,
+    MY_CHAT_MEMBER_UPDATE,
+    POLL,
+    POLL_ANSWER,
+    BUSINESS_CONNECTION,
+    UNKNOWN
+}

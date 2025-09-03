@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.neuralcoder.teleflux</groupId>
+        <artifactId>teleflux-impl</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>teleflux-di-processor</artifactId>
+    <name>Teleflux :: DI Processor</name>
+    <packaging>jar</packaging>
+
+    <properties>
+        <maven.compiler.release>21</maven.compiler.release>
+    </properties>
+
+    <dependencies>
+        <!-- Compile-time only: we read annotations and DI contracts -->
+        <dependency>
+            <groupId>org.neuralcoder.teleflux</groupId>
+            <artifactId>teleflux-di-api</artifactId>
+            <version>${project.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Optional: we also index event/bot annotations for auto-registration.
+             Keep as provided to avoid runtime deps/cycles. -->
+        <dependency>
+            <groupId>org.neuralcoder.teleflux</groupId>
+            <artifactId>teleflux-update-api</artifactId>
+            <version>${project.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Javapoet for source generation (tiny, stable) -->
+        <dependency>
+            <groupId>com.squareup</groupId>
+            <artifactId>javapoet</artifactId>
+            <version>1.13.0</version>
+        </dependency>
+
+        <!-- JSR 269 annotations (usually provided by JDK, keep for safety) -->
+        <dependency>
+            <groupId>jakarta.annotation</groupId>
+            <artifactId>jakarta.annotation-api</artifactId>
+            <version>2.1.1</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+</project>
